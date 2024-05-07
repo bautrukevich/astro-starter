@@ -1,0 +1,12 @@
+---
+import { BaseLayout } from "@/layouts";
+import { containerStyles } from "@/shared/ui/container";
+
+import styles from "./_styles.module.css";
+---
+
+<BaseLayout>
+  <main class:list={[containerStyles, styles.root]}>
+    Hello, World!
+  </main>
+</BaseLayout>
