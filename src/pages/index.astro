@@ -1,12 +1,20 @@
 ---
+import { ENV } from "@/shared/config";
 import { BaseLayout } from "@/layouts";
 import { containerStyles } from "@/shared/ui/container";
 
 import styles from "./_styles.module.css";
+
+console.log({
+  PUBLIC_ENV_VARIABLE: ENV.PUBLIC_ENV_VARIABLE,
+  PRIVATE_ENV_VARIABLE: ENV.PRIVATE_ENV_VARIABLE,
+});
 ---
 
 <BaseLayout>
   <main class:list={[containerStyles, styles.root]}>
-    Hello, World!
+    <p>Hello, World!</p>
+    <p>PUBLIC_ENV_VARIABLE: {ENV.PUBLIC_ENV_VARIABLE}</p>
+    <p>PRIVATE_ENV_VARIABLE: {ENV.PRIVATE_ENV_VARIABLE}</p>
   </main>
 </BaseLayout>
